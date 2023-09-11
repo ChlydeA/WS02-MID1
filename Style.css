@@ -1,7 +1,7 @@
 *{
 	margin: 0px;
 	box-sizing: border-box;
-	font-family: 'Softsoul Bold';
+	font-family: 'Poppins', sans-serif;
 }
 .whole{
 	background-size: cover;
@@ -11,7 +11,7 @@
 }
 .banner{
 	background-size: cover;
-	background-image:linear-gradient(rgba(0,0,0,0.15),rgba(0,0,0,0.15));
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
 	border-radius: 15px;
 	box-shadow: 0 0 5px rgba(0,0,5,3);
 }
@@ -31,10 +31,11 @@
 }
 .profile h1{
 	text-align: center;
-	color: #4FA0AA;
+	color: #3388BB;
 	font-size: 48px;
 	letter-spacing: .1px;
-	-webkit-text-stroke: .5px white;
+	-webkit-text-stroke: .3px white;
+	text-shadow: 1px 1px #FD6228;
 }
 #about {
 	text-align: center;
@@ -42,14 +43,17 @@
 	padding-bottom: 20px;
 	letter-spacing: .1px;
 }
+#about p{
+	line-height: 30px;
+}
 h2{
 	margin-top: 20px;
 	font-size: 36px;
 	text-align: center;
 	padding: 20px;
-	color: #4FA0AA;
+	color: #3388BB;
  	letter-spacing: .1px;
-	-webkit-text-stroke: .5px white;
+	
 }
 .characteristics ul{
 	display: table;
@@ -57,11 +61,21 @@ h2{
 }
 .characteristics ul li{
 	color: white;
-	font-size: 16pt;
+	font-size: 16px;
 	list-style-type: none;
 	line-height: 40px;
 	letter-spacing: .2px;	
 	border-bottom: 1px solid #4FA0AA;
+	margin: 10px;
+	margin-right: 40px;
+}
+.characteristics ul li a{
+	color: #3388BB;
+	font-weight: bold;
+	text-decoration: none;
+}
+.characteristics ul li a:hover{
+	color: #4FA0AA;
 }
 .main{
 	display: grid;
@@ -80,9 +94,16 @@ h2{
 .band1 img{
 	display: block;
 	margin: auto;
+	width: 60%;
 	border-radius: 50%;
 	margin-top: 30px;
 	transition: 0.5s ease;
+}
+.band1 p{
+	margin-top: 8px;
+	text-align: center;
+	font-size: 16px;
+	color: #fff;
 }
 .band img{
 	display: block;
@@ -96,17 +117,20 @@ h2{
 	scale: 0.5;
 }
 p{
-	font-size: 16pt;
+	font-size: 16px;
+	margin: 40px;
 }
 .bandmates{
 	display: flex;
 	justify-content: space-evenly;
+	margin: auto;
+	width: 70%;
 }
 .bandmates img{
-	width: 400px;
-	height: 400px;
+	width: 300px;
+	height: 300px;
 	border-radius: 50%;
-	box-shadow: 0px 0px 6px 6px #4FA0AA;
+	box-shadow: 1px #4FA0AA;
 }
 .bandmates img:hover{
 	transform: scale(0.9);
@@ -120,10 +144,10 @@ p{
 }
 .name p{
 	text-align: center;
-	color: #4FA0AA;
+	color: #3388BB;
 	font-size: 36px;
+	margin-top: 10px;
 	margin-bottom: 20px;
-	-webkit-text-stroke: .5px white;
 }
 .name a{
 	text-decoration: none;
@@ -138,6 +162,7 @@ footer p{
 	text-align: center;
 	margin-top: 20px;
 	margin-bottom: -50px;
+	padding: 5px;
 	font-size: 16px;
 }
 footer a{
@@ -152,8 +177,12 @@ footer a:hover{
 @media(max-width:1383px){
 	.bandmates img{
 		display: block;
-		width: 300px;
-		height: vh;
+		margin: auto;
+		width: 250px;
+		height: 250px;
+	}
+	.name p{
+		font-size: 24px;
 	}
 }
 @media(max-width:1177px){
@@ -167,7 +196,13 @@ footer a:hover{
 	}
 	.bandmates img{
 		display: block;
-		height: vh;
+		width: 200px;
+		height: 200px;
+
+	}
+	.name p{
+		margin-top: 10px;
+		font-size: 18px;
 	}
 }
 @media(max-width:1000px){
@@ -184,17 +219,27 @@ footer a:hover{
 	}
 }
 @media(max-width:688px){
+	.whole{
+		padding: 40px;
+	}
 	.profile img{
 		width: 300px;
 		height: vh;
+	}
+	#about{
+		text-align: left;
 	}
 	.band img{
 		width: 300px;
 		height: vh;
 	}
 	.band1 img{
+		margin-top: 70px;
 		width: 300px;
 		height: vh;
+	}
+	.band1 p{
+		visibility: hidden;
 	}
 	.bandmates{
 		display: block;
@@ -204,8 +249,14 @@ footer a:hover{
 		max-width: 200px;
 		height:  200px;
 	}
+	.name p{
+		font-size: 16px;
+	}
 }
 @media(max-width:477px){
+	.whole{
+		padding: 20px;
+	}
 	.profile img{
 		width: 200px;
 		height: vh;
@@ -218,6 +269,7 @@ footer a:hover{
 		height: vh;
 	}
 	.band1 img{
+		margin-top: 90px;
 		max-width: 200px;
 		height: vh;
 	}
@@ -243,4 +295,28 @@ footer a:hover{
 		font-size: 16px;
 	}
 
+}
+@media(max-width:374px){
+	.profile img{
+		width: 180px;
+		height: vh;
+	}
+	.band img{
+		max-width: 170px;
+		height: vh;
+	}
+	.band1 img{
+		max-width: 170px;
+		height: vh;
+	}
+	.band1 p{
+		font-size: 12px;
+	}
+		
+	.bandmates img{
+
+		max-width: 50px;
+		height:  50px;
+		box-shadow: 0px 0px 3px 3px #4FA0AA;
+	}
 }
