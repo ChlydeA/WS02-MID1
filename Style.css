@@ -312,11 +312,12 @@ footer a:hover{
 	.band1 p{
 		font-size: 12px;
 	}
-		
 	.bandmates img{
-
-		max-width: 50px;
-		height:  50px;
+		max-width: 10px;
+		height:  10px;
 		box-shadow: 0px 0px 3px 3px #4FA0AA;
+	}
+	.name p{
+		font-size: 12px;
 	}
 }
